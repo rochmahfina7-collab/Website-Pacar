@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Erlangga💗</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #fff0f5;
+    color: #a94370;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background: rgba(255,255,255,0.9);
+    padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 15px #e9a5c455;
+}
+
+.logo {
+    font-size: 23px;
+    color: #e45c99;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #a94370;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #ff69a6;
+}
+
+section {
+    padding: 75px 20px;
+    text-align: center;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#ffe0ec,#ffb9d2,#fff0f5);
+}
+
+.hero h1 {
+    font-size: clamp(38px, 8vw, 65px);
+    color: #e45c99;
+    margin: 15px;
+}
+
+.hero p {
+    line-height: 1.8;
+}
+
+.heart {
+    font-size: 65px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.2); }
+}
+
+.btn {
+    background: #ed76a8;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 28px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #d94d8a;
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 32px;
+    color: #df6098;
+    margin-bottom: 15px;
+}
+
+.desc {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about {
+    background: #fff9fc;
+}
+
+.about-box {
+    background: white;
+    padding: 30px;
+    max-width: 650px;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px #e9a5c455;
+    line-height: 2;
+}
+
+.gallery {
+    background: #ffe6f0;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.photo-card {
+    background: white;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #d986ad55;
+    transform: rotate(-1deg);
+    transition: .3s;
+}
+
+.photo-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.photo-card:hover {
+    transform: rotate(0) translateY(-7px);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo-card p {
+    padding: 12px 5px 5px;
+}
+
+.letter {
+    background: #fff9fc;
+}
+
+.letter-box {
+    background: white;
+    max-width: 650px;
+    padding: 35px;
+    margin: auto;
+    border: 2px dashed #f3a4c4;
+    border-radius: 20px;
+    line-height: 2;
+    text-align: left;
+}
+
+.letter-box h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e45c99;
+}
+
+.counter {
+    background: linear-gradient(135deg,#ffc9df,#ffeaf2);
+}
+
+.counter-box {
+    background: white;
+    display: inline-block;
+    padding: 30px 45px;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+.counter-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #e45c99;
+}
+
+.surprise {
+    background: #fff9fc;
+}
+
+#secret {
+    display: none;
+    background: #ffe5f0;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 25px auto 0;
+    line-height: 2;
+}
+
+footer {
+    background: #f7a6c6;
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+@media(max-width:500px) {
+    nav {
+        gap: 12px;
+    }
+
+    .letter-box {
+        padding: 22px;
+    }
+
+    section {
+        padding: 60px 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Our Little World ♡</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#letter">Letter</a>
+        <a href="#counter">Our Days</a>
+        <a href="#surprise">Surprise</a>
+    </nav>
+</header>
+
+<!-- HALAMAN PEMBUKA -->
+<section class="hero" id="home">
+    <div class="heart">💗</div>
+    <p>A little website made with love</p>
+    <h1>For My Favorite Person</h1>
+
+    <p>
+        Hai, kamu! 💗
+
+Aku punya sedikit sesuatu buat kamu. Mungkin ini bukan hadiah yang mewah, tapi aku membuatnya dengan penuh rasa sayang.
+Aku cuma ingin kamu tahu kalau kehadiran kamu punya arti tersendiri buat aku. Jadi, selamat menikmati sedikit cerita tentang kita. ♡
+    </p>
+
+    <button class="btn" onclick="document.getElementById('about').scrollIntoView()">
+        Open My Heart ♡
+    </button>
+</section>
+
+<!-- TENTANG KITA -->
+<section class="about" id="about">
+    <h2>About Us 💕</h2>
+    <p class="desc">A little story about two people.</p>
+
+    <div class="about-box">
+        <h3>Hi, My Love! 💗</h3>
+        <p>
+           Awalnya mungkin kita cuma dua orang yang saling mengenal, tapi tanpa sadar kamu jadi salah satu bagian yang paling aku tunggu dalam setiap hariku.
+           Bersama kamu, aku belajar banyak hal. Tentang sabar, mengerti, saling menjaga, dan menerima kekurangan satu sama lain.
+           Aku tahu hubungan kita nggak selalu berjalan sempurna, tapi aku senang karena sampai sekarang kita masih punya cerita untuk diperjuangkan. 💗
+
+            <br><br>
+
+            Terima kasih sudah menjadi bagian
+            dari cerita indah dalam hidupku.
+        </p>
+    </div>
+</section>
+
+<!-- GALERI FOTO -->
+<section class="gallery" id="gallery">
+    <h2>Our Memories 📸</h2>
+    <p class="desc">Every picture has its own story.</p>
+
+    <div class="photos">
+
+        <div class="photo-card">
+            <img src="Memory SMP.jpg" alt="Kenangan 1">
+            <p>Our first memory ♡</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="BestMomentt.jpg" alt="Kenangan 2">
+            <p>My favorite moment 💗</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="Alwys KMUUU.jpg" alt="Kenangan 3">
+            <p>With you, always.</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="Screenshot_20231111-143055_WhatsApp.jpg" alt="Kenangan 4">
+            <p>Another beautiful day ♡</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="lv_7305776105858845954_20240409233859.mp4" alt="Kenangan 5">
+            <p>My happiness 💕</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="Screenshot_20240419-191630_Video Player.jpg" alt="Kenangan 6">
+            <p>Forever in my memories.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SURAT CINTA -->
+<section class="letter" id="letter">
+    <h2>A Letter For You 💌</h2>
+    <p class="desc">Something I want you to know.</p>
+
+    <div class="letter-box">
+        <h3>Dear My Love,</h3>
+
+        <p>
+            Hai sayanggg...
+
+            <br><br>
+
+            **Dear You,**
+
+Sayanggg...
+
+Aku sebenarnya bingung mau mulai dari mana, karena rasanya banyak banget hal yang ingin aku ceritain ke kamu.
+
+Makasih ya, sudah hadir dan menjadi bagian dari hari-hariku. Makasih juga karena sudah bertahan sejauh ini, bahkan di saat kita mungkin sama-sama lagi capek atau nggak selalu saling mengerti.
+
+Aku memang nggak selalu bisa jadi pasangan yang sempurna. Kadang masih banyak salah, masih suka bikin kamu kesal, dan mungkin ada hal-hal yang belum bisa aku lakukan dengan baik.
+
+Tapi satu hal yang ingin aku sampaikan, aku selalu menghargai keberadaan kamu.
+
+Aku nggak minta hubungan kita selalu bahagia setiap saat. Aku cuma berharap kalau nanti ada masalah, kita nggak gampang menyerah satu sama lain.
+
+Semoga masih banyak tanggal yang bisa kita rayakan, banyak tempat yang bisa kita datangi, dan banyak kenangan yang bisa kita buat bersama.
+
+**I love you, more than these little words can explain.** ♡
+
+Love,
+Your favorite person 💗
+
+            <br><br>
+
+            Aku berharap kita bisa terus
+            menciptakan banyak kenangan indah.
+            Terima kasih sudah hadir.
+
+            <br><br>
+
+            With all my love,
+            <br>
+            [NAMA KAMU] 💗
+        </p>
+    </div>
+</section>
+
+<!-- PENGHITUNG HARI -->
+<section class="counter" id="counter">
+    <h2>Our Days Together ♡</h2>
+
+    <p>And the story continues...</p>
+
+    <div class="counter-box">
+        <div class="counter-number" id="days">0</div>
+        <p>Days Together 💗</p>
+    </div>
+</section>
+
+<!-- KEJUTAN -->
+<section class="surprise" id="surprise">
+    <h2>One Last Thing... 🎀</h2>
+
+    <p class="desc">
+        Ada sesuatu yang ingin aku kasih tahu.
+    </p>
+
+    <button class="btn" onclick="showSecret()">
+        Click for Surprise 💗
+    </button>
+
+    <div id="secret">
+        <h3>YOU ARE SPECIAL! 💕</h3>
+        <p>
+            HEHEHE, KETEMU PESAN RAHASIANYA! 💗
+
+Kalau kamu lagi baca ini, berarti kamu sudah sampai di bagian terakhir website kecil ini.
+
+Jangan lupa kalau ada seseorang yang selalu berharap kamu bahagia. Jangan terlalu keras sama diri sendiri, ya.
+
+Kalau suatu hari kamu merasa dunia lagi nggak baik-baik saja, semoga kamu ingat kalau kamu tetap berharga.
+
+One more thing...
+
+I'M SO GLAD I MET YOU. 🧸💕
+
+            <br><br>
+
+            I love you! ♡
+        </p>
+    </div>
+</section>
+
+<footer>
+    Made with love ♡
+    <br>
+    [ M.ERLANGGA YAOAN .P.]
+</footer>
+
+<script>
+
+// GANTI TANGGAL JADIAN DI SINI
+const tanggalJadian = new Date("05-06-2023");
+
+function hitungHari() {
+    const sekarang = new Date();
+
+    const selisih = sekarang - tanggalJadian;
+
+    const hari = Math.max(
+        0,
+        Math.floor(selisih / (1000 * 60 * 60 * 24))
+    );
+
+    document.getElementById("days").innerText = hari;
+}
+
+hitungHari();
+
+function showSecret() {
+    const pesan = document.getElementById("secret");
+
+    if (pesan.style.display === "block") {
+        pesan.style.display = "none";
+    } else {
+        pesan.style.display = "block";
+    }
+}
+
+</script>
+
+</body>
+</html>
